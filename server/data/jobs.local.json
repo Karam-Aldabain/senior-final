@@ -1,0 +1,1443 @@
+[
+  {
+    "title": "Frontend Developer",
+    "company": "NovaStack",
+    "location": "Amman, Jordan",
+    "type": "Hybrid",
+    "salary": "$1,300 - $1,800 / month",
+    "category": "Frontend Developer",
+    "experienceLevel": "Junior",
+    "description": "Build polished customer-facing interfaces for a B2B SaaS dashboard used by sales and operations teams.",
+    "overview": "You will ship React features, reusable components, and API-driven experiences with strong responsive behavior.",
+    "requirements": [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "REST APIs",
+      "Git"
+    ],
+    "coreSkills": [
+      "React",
+      "JavaScript",
+      "REST APIs"
+    ],
+    "niceToHave": [
+      "TypeScript",
+      "Tailwind CSS",
+      "Testing",
+      "Responsive Design"
+    ],
+    "responsibilities": [
+      "Build product UI from Figma",
+      "Integrate backend APIs",
+      "Write maintainable component code",
+      "Collaborate with product and design teams"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Hybrid work",
+      "Learning budget",
+      "Performance bonus"
+    ],
+    "tags": [
+      "SaaS",
+      "Dashboard",
+      "Product UI"
+    ],
+    "isFeatured": true,
+    "postedAt": "2026-03-19T10:35:55.761Z",
+    "logo": "",
+    "companyInitial": "N",
+    "_id": "79f9e83d-fdd4-4dd1-9e8b-4f605e3ee08b"
+  },
+  {
+    "title": "React Developer",
+    "company": "BlueOrbit",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2,200 - $2,800 / month",
+    "category": "React Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Own feature delivery in a React codebase powering a workflow platform used by distributed operations teams.",
+    "overview": "This role needs strong React, API integration, and collaboration in a fast product environment.",
+    "requirements": [
+      "React",
+      "TypeScript",
+      "REST APIs",
+      "Testing",
+      "Git"
+    ],
+    "coreSkills": [
+      "React",
+      "TypeScript",
+      "Testing"
+    ],
+    "niceToHave": [
+      "React Query",
+      "Tailwind CSS",
+      "Accessibility",
+      "Performance Optimization"
+    ],
+    "responsibilities": [
+      "Ship React features",
+      "Improve test coverage",
+      "Refactor shared UI patterns",
+      "Work closely with backend engineers"
+    ],
+    "benefits": [
+      "Remote-first team",
+      "Home office allowance",
+      "Annual bonus",
+      "Paid courses"
+    ],
+    "tags": [
+      "React",
+      "TypeScript",
+      "Product"
+    ],
+    "isFeatured": true,
+    "postedAt": "2026-03-18T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "B",
+    "_id": "7e4bd853-f8ee-4a3d-9ecf-92c97b7c5fd4"
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Cedar Labs",
+    "location": "Amman, Jordan",
+    "type": "On-site",
+    "salary": "$1,800 - $2,400 / month",
+    "category": "Full Stack Developer",
+    "experienceLevel": "Junior",
+    "description": "Help deliver end-to-end product features across customer portals, internal tools, and backend APIs.",
+    "overview": "The team wants an engineer who can move between React interfaces, Node.js services, and MongoDB-backed workflows.",
+    "requirements": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs",
+      "Git"
+    ],
+    "coreSkills": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "niceToHave": [
+      "Docker",
+      "TypeScript",
+      "Testing",
+      "Problem Solving"
+    ],
+    "responsibilities": [
+      "Develop frontend and backend features",
+      "Model data in MongoDB",
+      "Build CRUD endpoints",
+      "Support releases and bug fixes"
+    ],
+    "benefits": [
+      "Medical insurance",
+      "Lunch stipend",
+      "Career mentorship",
+      "Annual review"
+    ],
+    "tags": [
+      "Full stack",
+      "CRUD",
+      "Internal tools"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-17T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "CL",
+    "_id": "a6a8ae00-8a90-494e-b1c9-cf5819249ca9"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "ScaleGrid",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2,500 - $3,300 / month",
+    "category": "Backend Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Build reliable APIs and background services for a logistics platform handling high-volume order events.",
+    "overview": "You will focus on Node.js services, data access, API performance, and maintainable backend architecture.",
+    "requirements": [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "MongoDB",
+      "Authentication",
+      "Git"
+    ],
+    "coreSkills": [
+      "Node.js",
+      "Express",
+      "Authentication"
+    ],
+    "niceToHave": [
+      "Docker",
+      "Redis",
+      "CI/CD",
+      "SQL"
+    ],
+    "responsibilities": [
+      "Design and implement APIs",
+      "Own backend debugging",
+      "Optimize database access",
+      "Contribute to deployments"
+    ],
+    "benefits": [
+      "Remote stipend",
+      "Private insurance",
+      "Flexible hours",
+      "Company offsites"
+    ],
+    "tags": [
+      "Backend",
+      "APIs",
+      "Auth"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-16T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "S",
+    "_id": "5dae52d5-f1f0-47ce-98a3-5cf7afedc1f8"
+  },
+  {
+    "title": "UI/UX Designer",
+    "company": "Pixel North",
+    "location": "Dubai, UAE",
+    "type": "Hybrid",
+    "salary": "$2,000 - $2,700 / month",
+    "category": "UI/UX Designer",
+    "experienceLevel": "Mid-Level",
+    "description": "Design intuitive flows and polished interfaces for fintech products serving mobile and web users.",
+    "overview": "The design team needs someone who can move from research and wireframes into high-fidelity design and handoff.",
+    "requirements": [
+      "Figma",
+      "UI Design",
+      "UX Design",
+      "Wireframing",
+      "Prototyping",
+      "Communication"
+    ],
+    "coreSkills": [
+      "Figma",
+      "UI Design",
+      "UX Design"
+    ],
+    "niceToHave": [
+      "Design Systems",
+      "User Research",
+      "Usability Testing",
+      "Stakeholder Management"
+    ],
+    "responsibilities": [
+      "Create wireframes and prototypes",
+      "Own design handoff quality",
+      "Participate in usability reviews",
+      "Maintain design system consistency"
+    ],
+    "benefits": [
+      "Hybrid work",
+      "Design conference budget",
+      "Medical cover",
+      "Quarterly bonuses"
+    ],
+    "tags": [
+      "Figma",
+      "UX",
+      "Fintech"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-15T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "PN",
+    "_id": "3d0f4bae-8397-4815-97a8-14b9797cbf77"
+  },
+  {
+    "title": "Product Designer",
+    "company": "Flowbit",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2,800 - $3,500 / month",
+    "category": "Product Designer",
+    "experienceLevel": "Mid-Level",
+    "description": "Shape product experiences across onboarding, analytics, and collaboration workflows for a SaaS product.",
+    "overview": "You will work with product managers and engineers to define user problems, test ideas, and deliver production-ready designs.",
+    "requirements": [
+      "Figma",
+      "Product Thinking",
+      "UX Design",
+      "Prototyping",
+      "Stakeholder Management"
+    ],
+    "coreSkills": [
+      "Figma",
+      "Product Thinking",
+      "UX Design"
+    ],
+    "niceToHave": [
+      "A/B Testing",
+      "Design Systems",
+      "User Research",
+      "Communication"
+    ],
+    "responsibilities": [
+      "Lead end-to-end product design",
+      "Frame user problems",
+      "Prototype new concepts",
+      "Collaborate with engineering"
+    ],
+    "benefits": [
+      "Remote-first",
+      "Unlimited PTO",
+      "Learning stipend",
+      "Equipment allowance"
+    ],
+    "tags": [
+      "Product",
+      "SaaS",
+      "Research"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-14T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "F",
+    "_id": "9477d098-fd0a-4ae1-bf88-f3100f6b9681"
+  },
+  {
+    "title": "QA Engineer",
+    "company": "TestForge",
+    "location": "Amman, Jordan",
+    "type": "Hybrid",
+    "salary": "$1,600 - $2,200 / month",
+    "category": "QA Engineer",
+    "experienceLevel": "Junior",
+    "description": "Improve release quality across a multi-product platform through test planning, automation, and close collaboration.",
+    "overview": "The team values someone who can combine manual QA discipline with growing automation depth.",
+    "requirements": [
+      "Testing",
+      "Manual Testing",
+      "Regression Testing",
+      "Postman",
+      "Communication"
+    ],
+    "coreSkills": [
+      "Testing",
+      "Manual Testing",
+      "Regression Testing"
+    ],
+    "niceToHave": [
+      "Cypress",
+      "Playwright",
+      "REST APIs",
+      "Attention to Detail"
+    ],
+    "responsibilities": [
+      "Execute regression cycles",
+      "Write test cases",
+      "Validate APIs and UI flows",
+      "Track bugs and verify fixes"
+    ],
+    "benefits": [
+      "Hybrid policy",
+      "Medical insurance",
+      "Training budget",
+      "Performance incentives"
+    ],
+    "tags": [
+      "QA",
+      "Automation",
+      "Regression"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-18T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "T",
+    "_id": "d72bb63b-5069-41ae-9de2-ad7faf95e893"
+  },
+  {
+    "title": "Data Analyst",
+    "company": "Insight Harbor",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2,100 - $2,900 / month",
+    "category": "Data Analyst",
+    "experienceLevel": "Junior",
+    "description": "Turn operational and product data into dashboards, recommendations, and decision-ready reporting.",
+    "overview": "You will write SQL, build dashboards, validate data quality, and communicate findings to stakeholders.",
+    "requirements": [
+      "SQL",
+      "Data Analysis",
+      "Data Visualization",
+      "Excel",
+      "Communication"
+    ],
+    "coreSkills": [
+      "SQL",
+      "Data Analysis",
+      "Data Visualization"
+    ],
+    "niceToHave": [
+      "Power BI",
+      "Tableau",
+      "Python",
+      "Stakeholder Management"
+    ],
+    "responsibilities": [
+      "Build dashboards",
+      "Write reporting queries",
+      "Analyze trends",
+      "Present insights to business teams"
+    ],
+    "benefits": [
+      "Remote work",
+      "Learning support",
+      "Internet allowance",
+      "Annual bonus"
+    ],
+    "tags": [
+      "Analytics",
+      "Dashboards",
+      "SQL"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-13T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "IH",
+    "_id": "928e7f4b-e4ea-4736-bf95-d9f476da4e95"
+  },
+  {
+    "title": "Mobile Developer",
+    "company": "Palm Apps",
+    "location": "Cairo, Egypt",
+    "type": "Hybrid",
+    "salary": "$2,300 - $3,100 / month",
+    "category": "Mobile Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Build mobile experiences for a consumer app focused on subscriptions, content discovery, and account management.",
+    "overview": "The team is open to React Native or Flutter backgrounds as long as you can ship polished features.",
+    "requirements": [
+      "React Native",
+      "REST APIs",
+      "Git",
+      "Testing",
+      "Problem Solving"
+    ],
+    "coreSkills": [
+      "React Native",
+      "REST APIs",
+      "Testing"
+    ],
+    "niceToHave": [
+      "TypeScript",
+      "Firebase",
+      "Android",
+      "iOS"
+    ],
+    "responsibilities": [
+      "Implement app features",
+      "Integrate APIs",
+      "Improve app quality",
+      "Support release cycles"
+    ],
+    "benefits": [
+      "Hybrid schedule",
+      "Device budget",
+      "Medical insurance",
+      "Career growth plan"
+    ],
+    "tags": [
+      "Mobile",
+      "React Native",
+      "Consumer app"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-17T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "PA",
+    "_id": "69a42771-e704-4a17-9926-47027e6f16a3"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "CloudPort",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$3,200 - $4,100 / month",
+    "category": "DevOps Engineer",
+    "experienceLevel": "Mid-Level",
+    "description": "Own deployment pipelines, cloud infrastructure, and service reliability for a multi-environment SaaS stack.",
+    "overview": "You will improve CI/CD, container orchestration, and observability practices across engineering teams.",
+    "requirements": [
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Terraform",
+      "Kubernetes"
+    ],
+    "coreSkills": [
+      "AWS",
+      "Docker",
+      "CI/CD"
+    ],
+    "niceToHave": [
+      "Nginx",
+      "Problem Solving",
+      "Leadership",
+      "Project Management"
+    ],
+    "responsibilities": [
+      "Maintain pipelines",
+      "Manage infrastructure as code",
+      "Improve deployments",
+      "Support reliability"
+    ],
+    "benefits": [
+      "Remote-first",
+      "Annual bonus",
+      "Home office stipend",
+      "Private insurance"
+    ],
+    "tags": [
+      "Cloud",
+      "Infrastructure",
+      "Platform"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-19T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "C",
+    "_id": "9aa214ab-229d-446a-8413-fb10a17f6475"
+  },
+  {
+    "title": "Frontend Engineer",
+    "company": "Northwind Health",
+    "location": "Riyadh, Saudi Arabia",
+    "type": "Hybrid",
+    "salary": "$2,700 - $3,400 / month",
+    "category": "Frontend Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Ship accessible and performant frontend features for healthcare dashboards and patient-facing workflows.",
+    "overview": "The role combines design-heavy implementation with API-driven state handling and strong code quality expectations.",
+    "requirements": [
+      "React",
+      "TypeScript",
+      "Accessibility",
+      "Responsive Design",
+      "REST APIs",
+      "Git"
+    ],
+    "coreSkills": [
+      "React",
+      "TypeScript",
+      "Accessibility"
+    ],
+    "niceToHave": [
+      "Testing",
+      "Tailwind CSS",
+      "Performance Optimization",
+      "Figma"
+    ],
+    "responsibilities": [
+      "Own complex interface flows",
+      "Improve accessibility",
+      "Collaborate with design",
+      "Support code reviews"
+    ],
+    "benefits": [
+      "Housing support",
+      "Medical insurance",
+      "Relocation assistance",
+      "Paid training"
+    ],
+    "tags": [
+      "Healthcare",
+      "Accessibility",
+      "Product UI"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-12T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "NH",
+    "_id": "61534bbe-b0a6-48d8-85b5-bf66d17f0b6a"
+  },
+  {
+    "title": "Senior React Developer",
+    "company": "Octave Systems",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$4,000 - $5,200 / month",
+    "category": "React Developer",
+    "experienceLevel": "Senior",
+    "description": "Lead frontend delivery for a platform serving enterprise workflow automation customers.",
+    "overview": "You will own architecture decisions, mentor engineers, and improve design system quality in a large React codebase.",
+    "requirements": [
+      "React",
+      "TypeScript",
+      "Design Systems",
+      "Testing",
+      "Leadership",
+      "Performance Optimization"
+    ],
+    "coreSkills": [
+      "React",
+      "TypeScript",
+      "Leadership"
+    ],
+    "niceToHave": [
+      "Next.js",
+      "Accessibility",
+      "React Query",
+      "Stakeholder Management"
+    ],
+    "responsibilities": [
+      "Set frontend standards",
+      "Mentor engineers",
+      "Lead complex feature delivery",
+      "Improve architecture"
+    ],
+    "benefits": [
+      "Remote package",
+      "Equity",
+      "Private health coverage",
+      "Leadership coaching"
+    ],
+    "tags": [
+      "Leadership",
+      "React",
+      "Architecture"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-11T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "OS",
+    "_id": "0e7a5666-2158-4b5a-8874-19fe37b07bee"
+  },
+  {
+    "title": "API Engineer",
+    "company": "RoutePulse",
+    "location": "Doha, Qatar",
+    "type": "On-site",
+    "salary": "$3,000 - $3,900 / month",
+    "category": "Backend Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Develop robust APIs and event-driven services for a mobility and dispatch platform.",
+    "overview": "You will work on integrations, service performance, auth, and data consistency for systems used in real time.",
+    "requirements": [
+      "Node.js",
+      "REST APIs",
+      "Authentication",
+      "MongoDB",
+      "Docker",
+      "Git"
+    ],
+    "coreSkills": [
+      "Node.js",
+      "REST APIs",
+      "Authentication"
+    ],
+    "niceToHave": [
+      "Redis",
+      "Microservices",
+      "CI/CD",
+      "Problem Solving"
+    ],
+    "responsibilities": [
+      "Develop API endpoints",
+      "Secure service access",
+      "Improve service performance",
+      "Support integrations"
+    ],
+    "benefits": [
+      "Relocation support",
+      "Bonus scheme",
+      "Medical cover",
+      "Team events"
+    ],
+    "tags": [
+      "API",
+      "Auth",
+      "Integrations"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-10T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "R",
+    "_id": "cb035ef6-c652-4421-a72b-3ba8b0d55f49"
+  },
+  {
+    "title": "Product Analytics Analyst",
+    "company": "SignalPad",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2,400 - $3,000 / month",
+    "category": "Data Analyst",
+    "experienceLevel": "Mid-Level",
+    "description": "Partner with product managers to measure product adoption, funnel performance, and experiment outcomes.",
+    "overview": "This role is ideal for someone who can work with SQL and dashboards while communicating clearly with stakeholders.",
+    "requirements": [
+      "SQL",
+      "Data Analysis",
+      "Data Visualization",
+      "A/B Testing",
+      "Stakeholder Management"
+    ],
+    "coreSkills": [
+      "SQL",
+      "Data Analysis",
+      "A/B Testing"
+    ],
+    "niceToHave": [
+      "Python",
+      "Tableau",
+      "Power BI",
+      "Communication"
+    ],
+    "responsibilities": [
+      "Analyze product funnels",
+      "Support experiment analysis",
+      "Build dashboards",
+      "Present findings"
+    ],
+    "benefits": [
+      "Remote schedule",
+      "Learning budget",
+      "Annual retreat",
+      "Performance bonus"
+    ],
+    "tags": [
+      "Product analytics",
+      "Experiments",
+      "Dashboards"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-16T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "S",
+    "_id": "8d4d13e2-efb7-4d04-ab35-1aca5854a777"
+  },
+  {
+    "title": "UI Engineer",
+    "company": "MintFlow",
+    "location": "Amman, Jordan",
+    "type": "Hybrid",
+    "salary": "$1,900 - $2,500 / month",
+    "category": "Frontend Developer",
+    "experienceLevel": "Junior",
+    "description": "Translate design system standards into reusable product components across a marketing and customer app suite.",
+    "overview": "You will sit between product design and frontend engineering with strong emphasis on implementation quality.",
+    "requirements": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Figma",
+      "Design Systems",
+      "Git"
+    ],
+    "coreSkills": [
+      "HTML",
+      "CSS",
+      "Design Systems"
+    ],
+    "niceToHave": [
+      "React",
+      "Accessibility",
+      "Responsive Design",
+      "Tailwind CSS"
+    ],
+    "responsibilities": [
+      "Implement shared UI components",
+      "Maintain design consistency",
+      "Support UI reviews",
+      "Collaborate on handoff"
+    ],
+    "benefits": [
+      "Hybrid work",
+      "Training allowance",
+      "Medical plan",
+      "Mentorship"
+    ],
+    "tags": [
+      "Design systems",
+      "Components",
+      "UI"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-14T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "M",
+    "_id": "682bda5e-8c06-4548-8362-31423bd94a07"
+  },
+  {
+    "title": "Junior QA Automation Engineer",
+    "company": "VerifyStack",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$1,700 - $2,300 / month",
+    "category": "QA Engineer",
+    "experienceLevel": "Junior",
+    "description": "Build and expand automation coverage across web and API quality workflows.",
+    "overview": "The role blends structured manual testing with an automation roadmap using Playwright, Postman, and CI flows.",
+    "requirements": [
+      "Testing",
+      "Postman",
+      "Regression Testing",
+      "Communication",
+      "Problem Solving"
+    ],
+    "coreSkills": [
+      "Testing",
+      "Postman",
+      "Regression Testing"
+    ],
+    "niceToHave": [
+      "Playwright",
+      "Cypress",
+      "CI/CD",
+      "REST APIs"
+    ],
+    "responsibilities": [
+      "Create automation scenarios",
+      "Validate releases",
+      "Work with developers on fixes",
+      "Improve QA docs"
+    ],
+    "benefits": [
+      "Remote setup budget",
+      "Health insurance",
+      "Paid certifications",
+      "Quarterly incentives"
+    ],
+    "tags": [
+      "QA automation",
+      "API testing",
+      "Playwright"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-15T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "V",
+    "_id": "fbe56614-3a5d-4a2f-bded-41665be02ab7"
+  },
+  {
+    "title": "Flutter Developer",
+    "company": "Arc Mobile",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2,400 - $3,000 / month",
+    "category": "Mobile Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Build cross-platform mobile features for a fintech application with strong reliability requirements.",
+    "overview": "You will ship Flutter screens, integrate APIs, and improve release quality for Android and iOS users.",
+    "requirements": [
+      "Flutter",
+      "REST APIs",
+      "Testing",
+      "Git",
+      "Communication"
+    ],
+    "coreSkills": [
+      "Flutter",
+      "REST APIs",
+      "Testing"
+    ],
+    "niceToHave": [
+      "Firebase",
+      "iOS",
+      "Android",
+      "Problem Solving"
+    ],
+    "responsibilities": [
+      "Develop mobile screens",
+      "Integrate backend services",
+      "Support app testing",
+      "Ship updates"
+    ],
+    "benefits": [
+      "Remote-first",
+      "Healthcare plan",
+      "App store bonus",
+      "Training stipend"
+    ],
+    "tags": [
+      "Flutter",
+      "Cross-platform",
+      "Fintech"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-13T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "AM",
+    "_id": "aaad4a00-9cd5-4a2b-8bca-f61c0a2862e8"
+  },
+  {
+    "title": "Cloud Platform Engineer",
+    "company": "InfraPeak",
+    "location": "Abu Dhabi, UAE",
+    "type": "Hybrid",
+    "salary": "$3,800 - $4,800 / month",
+    "category": "DevOps Engineer",
+    "experienceLevel": "Senior",
+    "description": "Scale AWS infrastructure and internal developer platforms for product teams shipping multiple services.",
+    "overview": "This is a platform-focused role covering infrastructure as code, deployment reliability, and cloud cost optimization.",
+    "requirements": [
+      "AWS",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Linux"
+    ],
+    "coreSkills": [
+      "AWS",
+      "Terraform",
+      "Kubernetes"
+    ],
+    "niceToHave": [
+      "Nginx",
+      "Leadership",
+      "Project Management",
+      "Problem Solving"
+    ],
+    "responsibilities": [
+      "Own infrastructure changes",
+      "Support engineering teams",
+      "Improve release velocity",
+      "Maintain governance"
+    ],
+    "benefits": [
+      "Relocation package",
+      "Private insurance",
+      "Annual bonus",
+      "Training allowance"
+    ],
+    "tags": [
+      "Platform",
+      "AWS",
+      "Kubernetes"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-09T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "I",
+    "_id": "0eb9e6e5-4b3b-4c5f-abde-10df32bedff5"
+  },
+  {
+    "title": "Product Designer II",
+    "company": "Kite Commerce",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$3,000 - $3,800 / month",
+    "category": "Product Designer",
+    "experienceLevel": "Senior",
+    "description": "Design high-impact commerce journeys across catalog discovery, checkout, and seller onboarding.",
+    "overview": "The team wants a product designer who can combine user research with polished interface execution.",
+    "requirements": [
+      "Figma",
+      "UX Design",
+      "Product Thinking",
+      "User Research",
+      "Stakeholder Management"
+    ],
+    "coreSkills": [
+      "Figma",
+      "UX Design",
+      "User Research"
+    ],
+    "niceToHave": [
+      "A/B Testing",
+      "Design Systems",
+      "Usability Testing",
+      "Leadership"
+    ],
+    "responsibilities": [
+      "Lead major product surfaces",
+      "Run discovery activities",
+      "Prototype solutions",
+      "Drive alignment"
+    ],
+    "benefits": [
+      "Remote stipend",
+      "Unlimited vacation",
+      "Healthcare",
+      "Wellness budget"
+    ],
+    "tags": [
+      "Commerce",
+      "Research",
+      "Product"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-12T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "KC",
+    "_id": "9a79a891-96ee-46bc-9318-2c1a3310a532"
+  },
+  {
+    "title": "Business Intelligence Analyst",
+    "company": "MetricWave",
+    "location": "Amman, Jordan",
+    "type": "On-site",
+    "salary": "$1,900 - $2,600 / month",
+    "category": "Data Analyst",
+    "experienceLevel": "Junior",
+    "description": "Support leadership reporting through structured SQL analysis, dashboard maintenance, and operational insights.",
+    "overview": "You will partner with finance and operations teams to improve reporting quality and decision speed.",
+    "requirements": [
+      "SQL",
+      "Excel",
+      "Data Visualization",
+      "Communication",
+      "Attention to Detail"
+    ],
+    "coreSkills": [
+      "SQL",
+      "Excel",
+      "Data Visualization"
+    ],
+    "niceToHave": [
+      "Power BI",
+      "Tableau",
+      "Data Analysis",
+      "Project Management"
+    ],
+    "responsibilities": [
+      "Maintain dashboards",
+      "Validate reporting outputs",
+      "Build SQL queries",
+      "Communicate findings"
+    ],
+    "benefits": [
+      "On-site meals",
+      "Medical insurance",
+      "Training support",
+      "Performance reviews"
+    ],
+    "tags": [
+      "BI",
+      "Reporting",
+      "Operations"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-11T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "M",
+    "_id": "8dcae008-9bb5-4163-84d6-66b1f02bef5e"
+  },
+  {
+    "title": "Junior Backend Engineer",
+    "company": "Orbit Commerce",
+    "location": "Amman, Jordan",
+    "type": "Hybrid",
+    "salary": "$1,700 - $2,200 / month",
+    "category": "Backend Developer",
+    "experienceLevel": "Junior",
+    "description": "Contribute to backend services that power seller onboarding, catalog management, and checkout integrations.",
+    "overview": "You will work with experienced engineers on APIs, data models, and service debugging in a growing e-commerce platform.",
+    "requirements": [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "MongoDB",
+      "Git"
+    ],
+    "coreSkills": [
+      "Node.js",
+      "Express",
+      "REST APIs"
+    ],
+    "niceToHave": [
+      "Authentication",
+      "Docker",
+      "Testing",
+      "Problem Solving"
+    ],
+    "responsibilities": [
+      "Implement APIs",
+      "Support bug fixing",
+      "Model data",
+      "Write clean backend logic"
+    ],
+    "benefits": [
+      "Hybrid work",
+      "Mentorship program",
+      "Medical cover",
+      "Learning budget"
+    ],
+    "tags": [
+      "E-commerce",
+      "Node",
+      "Backend"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-17T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "OC",
+    "_id": "a5d0dd33-679f-47da-bb91-350f118ee240"
+  },
+  {
+    "title": "Full Stack Product Engineer",
+    "company": "LaunchFrame",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$3,100 - $3,900 / month",
+    "category": "Full Stack Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Own complete feature slices from frontend interaction to backend APIs in a product-led startup environment.",
+    "overview": "This role values pragmatic engineers who can move fast, make sound tradeoffs, and collaborate tightly with design and product.",
+    "requirements": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "REST APIs",
+      "MongoDB",
+      "Git"
+    ],
+    "coreSkills": [
+      "React",
+      "TypeScript",
+      "Node.js"
+    ],
+    "niceToHave": [
+      "Docker",
+      "Testing",
+      "Product Thinking",
+      "Communication"
+    ],
+    "responsibilities": [
+      "Deliver end-to-end features",
+      "Collaborate on product scoping",
+      "Improve code quality",
+      "Support releases"
+    ],
+    "benefits": [
+      "Remote-first",
+      "Startup equity",
+      "Health plan",
+      "Conference budget"
+    ],
+    "tags": [
+      "Startup",
+      "Product",
+      "Full stack"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-18T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "L",
+    "_id": "b888c802-5530-4d65-ba50-fc3002aeabbc"
+  },
+  {
+    "title": "Senior DevOps Engineer",
+    "company": "Harbor Systems",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$4,200 - $5,400 / month",
+    "category": "DevOps Engineer",
+    "experienceLevel": "Senior",
+    "description": "Drive reliability, incident response readiness, and delivery pipelines across a growing multi-service architecture.",
+    "overview": "You will lead improvements in infrastructure, CI/CD, cloud operations, and engineering platform standards.",
+    "requirements": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Terraform",
+      "Leadership"
+    ],
+    "coreSkills": [
+      "AWS",
+      "Kubernetes",
+      "Leadership"
+    ],
+    "niceToHave": [
+      "Linux",
+      "Nginx",
+      "Project Management",
+      "Problem Solving"
+    ],
+    "responsibilities": [
+      "Lead platform improvements",
+      "Guide incident readiness",
+      "Mentor engineers",
+      "Drive automation standards"
+    ],
+    "benefits": [
+      "Equity",
+      "Remote stipend",
+      "Top-tier insurance",
+      "Leadership budget"
+    ],
+    "tags": [
+      "SRE",
+      "Platform",
+      "Leadership"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-08T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "HS",
+    "_id": "87cf65f7-325e-409f-bfe4-f4af4868a66a"
+  },
+  {
+    "title": "React Native Engineer",
+    "company": "PulsePay",
+    "location": "Riyadh, Saudi Arabia",
+    "type": "Hybrid",
+    "salary": "$2,800 - $3,600 / month",
+    "category": "Mobile Developer",
+    "experienceLevel": "Mid-Level",
+    "description": "Ship new mobile product features for a payments application used by thousands of daily users.",
+    "overview": "You will build reliable mobile UI, connect services, and collaborate with backend and product teams on release delivery.",
+    "requirements": [
+      "React Native",
+      "TypeScript",
+      "REST APIs",
+      "Testing",
+      "Git"
+    ],
+    "coreSkills": [
+      "React Native",
+      "TypeScript",
+      "REST APIs"
+    ],
+    "niceToHave": [
+      "Firebase",
+      "iOS",
+      "Android",
+      "Performance Optimization"
+    ],
+    "responsibilities": [
+      "Build feature screens",
+      "Improve mobile stability",
+      "Collaborate with backend teams",
+      "Support store releases"
+    ],
+    "benefits": [
+      "Relocation support",
+      "Healthcare",
+      "Annual bonus",
+      "Device allowance"
+    ],
+    "tags": [
+      "Payments",
+      "Mobile",
+      "React Native"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-14T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "P",
+    "_id": "f38a60ea-6b4d-4bca-8731-c8cbe10b236c"
+  },
+  {
+    "title": "Junior Product Designer",
+    "company": "Orbit Learn",
+    "location": "Amman, Jordan",
+    "type": "Hybrid",
+    "salary": "$1,500 - $2,100 / month",
+    "category": "Product Designer",
+    "experienceLevel": "Junior",
+    "description": "Support product discovery and interface design for an edtech platform serving learners and instructors.",
+    "overview": "You will create wireframes, contribute to design systems, and collaborate with product and engineering teams.",
+    "requirements": [
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "Communication",
+      "UI Design"
+    ],
+    "coreSkills": [
+      "Figma",
+      "Wireframing",
+      "UI Design"
+    ],
+    "niceToHave": [
+      "UX Design",
+      "User Research",
+      "Design Systems",
+      "Product Thinking"
+    ],
+    "responsibilities": [
+      "Create wireframes and mockups",
+      "Support prototype testing",
+      "Prepare handoff assets",
+      "Maintain UI consistency"
+    ],
+    "benefits": [
+      "Hybrid schedule",
+      "Mentorship",
+      "Medical insurance",
+      "Learning allowance"
+    ],
+    "tags": [
+      "Edtech",
+      "UI",
+      "Junior design"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-15T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "OL",
+    "_id": "22021bfa-dbca-4e9f-b0ac-95b240edf0ef"
+  },
+  {
+    "title": "Analytics Engineer",
+    "company": "Atlas Retail",
+    "location": "Dubai, UAE",
+    "type": "Hybrid",
+    "salary": "$3,000 - $3,800 / month",
+    "category": "Data Analyst",
+    "experienceLevel": "Mid-Level",
+    "description": "Build trusted datasets, reporting layers, and business dashboards across supply chain and sales operations.",
+    "overview": "The role sits between engineering and analytics, with a focus on SQL transformation logic and reporting delivery.",
+    "requirements": [
+      "SQL",
+      "ETL",
+      "Data Analysis",
+      "Data Visualization",
+      "Problem Solving"
+    ],
+    "coreSkills": [
+      "SQL",
+      "ETL",
+      "Data Analysis"
+    ],
+    "niceToHave": [
+      "Python",
+      "Power BI",
+      "Excel",
+      "Stakeholder Management"
+    ],
+    "responsibilities": [
+      "Model analytics datasets",
+      "Build reporting logic",
+      "Validate data quality",
+      "Support dashboard consumers"
+    ],
+    "benefits": [
+      "Housing allowance",
+      "Medical cover",
+      "Annual bonus",
+      "Training budget"
+    ],
+    "tags": [
+      "Analytics engineering",
+      "Retail",
+      "ETL"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-13T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "AR",
+    "_id": "8d39f179-1b2a-4297-8704-71f5ab67431c"
+  },
+  {
+    "title": "Software QA Engineer",
+    "company": "Cobalt Apps",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2,200 - $2,900 / month",
+    "category": "QA Engineer",
+    "experienceLevel": "Mid-Level",
+    "description": "Drive test quality for a suite of customer-facing applications through structured validation and automation planning.",
+    "overview": "You will collaborate with product and engineering teams to improve release confidence and defect visibility.",
+    "requirements": [
+      "Testing",
+      "Regression Testing",
+      "Manual Testing",
+      "Postman",
+      "Communication"
+    ],
+    "coreSkills": [
+      "Testing",
+      "Regression Testing",
+      "Communication"
+    ],
+    "niceToHave": [
+      "Playwright",
+      "Cypress",
+      "CI/CD",
+      "REST APIs"
+    ],
+    "responsibilities": [
+      "Plan test cycles",
+      "Write automation-ready cases",
+      "Validate APIs and UI",
+      "Improve bug reporting quality"
+    ],
+    "benefits": [
+      "Remote work",
+      "Private insurance",
+      "Paid leave",
+      "Education budget"
+    ],
+    "tags": [
+      "Web QA",
+      "API QA",
+      "Automation roadmap"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-10T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "CA",
+    "_id": "c05e42ef-4648-46e1-a828-4b66ce2b1985"
+  },
+  {
+    "title": "Senior Frontend Developer",
+    "company": "Beacon Cloud",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$4,100 - $5,000 / month",
+    "category": "Frontend Developer",
+    "experienceLevel": "Senior",
+    "description": "Lead frontend architecture for a cloud management platform with dense dashboards and collaboration-heavy workflows.",
+    "overview": "You will own major UI decisions, drive performance and accessibility improvements, and mentor the frontend team.",
+    "requirements": [
+      "React",
+      "TypeScript",
+      "Accessibility",
+      "Performance Optimization",
+      "Leadership",
+      "Testing"
+    ],
+    "coreSkills": [
+      "React",
+      "TypeScript",
+      "Leadership"
+    ],
+    "niceToHave": [
+      "Next.js",
+      "Design Systems",
+      "React Query",
+      "Stakeholder Management"
+    ],
+    "responsibilities": [
+      "Lead roadmap execution",
+      "Mentor engineers",
+      "Improve app performance",
+      "Partner with product leadership"
+    ],
+    "benefits": [
+      "Equity",
+      "Remote setup",
+      "Premium health cover",
+      "Leadership development"
+    ],
+    "tags": [
+      "Frontend lead",
+      "Cloud platform",
+      "Architecture"
+    ],
+    "isFeatured": false,
+    "postedAt": "2026-03-07T10:35:55.762Z",
+    "logo": "",
+    "companyInitial": "BC",
+    "_id": "0eb39aae-078a-4bfb-9993-4accea794f18"
+  }
+]
