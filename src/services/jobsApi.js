@@ -1,5 +1,18 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
+function getAuthToken() {
+  try {
+    return JSON.parse(localStorage.getItem("hiresense_auth") || "null")?.token || "";
+  } catch {
+    return "";
+  }
+}
+
+function authHeaders(extraHeaders = {}) {
+  const token = getAuthToken();
+  return token ? { ...extraHeaders, Authorization: `Bearer ${token}` } : extraHeaders;
+}
+
 async function parseResponse(response) {
   const rawText = await response.text().catch(() => "");
   let data = null;
@@ -23,7 +36,7 @@ function toQueryString(params = {}) {
   const searchParams = new URLSearchParams();
 
   Object.entries(params).forEach(([key, value]) => {
-    if (value === undefined || value === null || value === "" || value === "all") {
+    if (value === undefined || value === null || value === "" || (value === "all" && key !== "scope")) {
       return;
     }
 
@@ -35,12 +48,16 @@ function toQueryString(params = {}) {
 
 export async function fetchJobs(params = {}) {
   const queryString = toQueryString(params);
-  const response = await fetch(`${API_BASE_URL}/api/jobs${queryString ? `?${queryString}` : ""}`);
+  const response = await fetch(`${API_BASE_URL}/api/jobs${queryString ? `?${queryString}` : ""}`, {
+    headers: authHeaders(),
+  });
   return parseResponse(response);
 }
 
 export async function fetchJobById(jobId) {
-  const response = await fetch(`${API_BASE_URL}/api/jobs/${jobId}`);
+  const response = await fetch(`${API_BASE_URL}/api/jobs/${jobId}`, {
+    headers: authHeaders(),
+  });
   return parseResponse(response);
 }
 
@@ -59,7 +76,7 @@ export async function uploadCvPdf(file) {
 export async function createJob(payload) {
   const response = await fetch(`${API_BASE_URL}/api/jobs`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: authHeaders({ "Content-Type": "application/json" }),
     body: JSON.stringify(payload),
   });
 
@@ -69,7 +86,7 @@ export async function createJob(payload) {
 export async function updateJob(jobId, payload) {
   const response = await fetch(`${API_BASE_URL}/api/jobs/${jobId}`, {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
+    headers: authHeaders({ "Content-Type": "application/json" }),
     body: JSON.stringify(payload),
   });
 
@@ -79,6 +96,17 @@ export async function updateJob(jobId, payload) {
 export async function deleteJob(jobId) {
   const response = await fetch(`${API_BASE_URL}/api/jobs/${jobId}`, {
     method: "DELETE",
+    headers: authHeaders(),
+  });
+
+  return parseResponse(response);
+}
+
+export async function reviewJob(jobId, status) {
+  const response = await fetch(`${API_BASE_URL}/api/jobs/${jobId}/review`, {
+    method: "PATCH",
+    headers: authHeaders({ "Content-Type": "application/json" }),
+    body: JSON.stringify({ status }),
   });
 
   return parseResponse(response);

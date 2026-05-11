@@ -18,7 +18,7 @@ export async function uploadCvAndAnalyze(request, response) {
     await fs.unlink(request.file.path).catch(() => {});
   }
 
-  const jobs = await getAllJobs({ postedAt: -1 });
+  const jobs = await getAllJobs({ postedAt: -1 }, { status: "approved" });
   const analysis = matchJobsAgainstCv(parsed.rawText, jobs);
 
   response.status(201).json({

@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import { getAllowedOrigins } from "./config/env.js";
+import authRoutes from "./routes/authRoutes.js";
 import cvRoutes from "./routes/cvRoutes.js";
 import jobRoutes from "./routes/jobRoutes.js";
 import coachChatRouter from "./routes/coachChat.js";
@@ -10,10 +11,18 @@ import { errorHandler, notFoundHandler } from "./middleware/errorMiddleware.js";
 const app = express();
 const allowedOrigins = getAllowedOrigins();
 
+function isAllowedOrigin(origin) {
+  if (!origin || allowedOrigins.includes(origin)) {
+    return true;
+  }
+
+  return /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(origin);
+}
+
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (isAllowedOrigin(origin)) {
         callback(null, true);
         return;
       }
@@ -49,6 +58,7 @@ app.get("/api/health", (_request, response) => {
   });
 });
 
+app.use("/api/auth", authRoutes);
 app.use("/api/jobs", jobRoutes);
 app.use("/api/cv", cvRoutes);
 app.use("/api/coach-chat", coachChatRouter);

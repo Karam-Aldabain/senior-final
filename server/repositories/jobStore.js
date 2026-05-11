@@ -1,189 +1,169 @@
 import fs from "fs/promises";
 import path from "path";
-import { randomUUID } from "crypto";
+import { DatabaseSync } from "node:sqlite";
 import { fileURLToPath } from "url";
+import { Job } from "../config/db.js";
 import { seedJobs } from "../data/seedJobs.js";
 import { sanitizeJobPayload } from "../utils/jobFormatters.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const STORE_PATH = path.resolve(__dirname, "../data/jobs.local.json");
+const LOCAL_STORE_PATH = path.resolve(__dirname, "../data/jobs.local.json");
+const SQLITE_STORE_PATH = path.resolve(__dirname, "../data/app.sqlite");
 
-let writeQueue = Promise.resolve();
-
-function sortItems(items, sort = { postedAt: -1 }) {
-  const [[field, direction]] = Object.entries(sort);
-  const sortDirection = direction === 1 ? 1 : -1;
-
-  return [...items].sort((left, right) => {
-    const leftValue = left[field];
-    const rightValue = right[field];
-
-    if (field === "postedAt") {
-      const leftTime = new Date(leftValue).getTime();
-      const rightTime = new Date(rightValue).getTime();
-      return (leftTime - rightTime) * sortDirection;
-    }
-
-    return String(leftValue ?? "").localeCompare(String(rightValue ?? "")) * sortDirection;
-  });
-}
-
-function matchesValue(source, matcher) {
-  if (matcher instanceof RegExp) {
-    if (Array.isArray(source)) {
-      return source.some((item) => matcher.test(String(item)));
-    }
-
-    return matcher.test(String(source ?? ""));
+function parseArray(value) {
+  try {
+    const parsed = JSON.parse(value || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
   }
-
-  return source === matcher;
 }
 
-function matchesFilters(job, filters = {}) {
-  for (const [key, value] of Object.entries(filters)) {
-    if (key === "$or") {
-      if (!value.some((rule) => matchesFilters(job, rule))) {
-        return false;
-      }
-
-      continue;
-    }
-
-    if (!matchesValue(job[key], value)) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-function normalizeStoredJob(job) {
+function sqliteRowToJob(row) {
   return {
-    ...job,
-    _id: String(job._id),
-    postedAt: new Date(job.postedAt || Date.now()).toISOString(),
+    _id: row.id,
+    title: row.title,
+    company: row.company,
+    location: row.location,
+    type: row.type,
+    salary: row.salary || "",
+    category: row.category,
+    experienceLevel: row.experience_level,
+    description: row.description,
+    overview: row.overview || "",
+    requirements: parseArray(row.requirements),
+    coreSkills: parseArray(row.core_skills),
+    niceToHave: parseArray(row.nice_to_have),
+    responsibilities: parseArray(row.responsibilities),
+    benefits: parseArray(row.benefits),
+    tags: parseArray(row.tags),
+    isFeatured: Boolean(row.is_featured),
+    postedAt: row.posted_at,
+    logo: row.logo || "",
+    companyInitial: row.company_initial || "",
+    status: row.status || "approved",
+    userId: null,
   };
 }
 
-async function writeStore(items) {
-  const payload = JSON.stringify(items, null, 2);
-  await fs.writeFile(STORE_PATH, `${payload}\n`, "utf8");
+function normalizeStoredJob(job = {}) {
+  const normalized = {
+    ...job,
+    postedAt: job.postedAt ? new Date(job.postedAt) : new Date(),
+    status: job.status || "approved",
+    userId: job.userId || null,
+  };
+
+  if (!job._id && !job.id) {
+    delete normalized._id;
+  }
+
+  return normalized;
 }
 
-async function ensureStore() {
+async function loadSqliteJobs() {
   try {
-    await fs.access(STORE_PATH);
+    await fs.access(SQLITE_STORE_PATH);
+    const sqlite = new DatabaseSync(SQLITE_STORE_PATH, { readOnly: true });
+    const rows = sqlite.prepare("SELECT * FROM jobs ORDER BY posted_at DESC").all();
+    sqlite.close();
+    return rows.map(sqliteRowToJob);
   } catch {
-    const initialJobs = seedJobs.map((job) => ({
-      ...sanitizeJobPayload(job),
-      _id: randomUUID(),
-      postedAt: new Date(job.postedAt || Date.now()).toISOString(),
-    }));
-
-    await writeStore(initialJobs);
+    return [];
   }
 }
 
-async function readStore() {
-  await ensureStore();
-  const raw = await fs.readFile(STORE_PATH, "utf8");
-  const parsed = JSON.parse(raw || "[]");
-  return parsed.map(normalizeStoredJob);
+async function loadJsonJobs() {
+  try {
+    const raw = await fs.readFile(LOCAL_STORE_PATH, "utf8");
+    const parsed = JSON.parse(raw || "[]");
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      return parsed;
+    }
+  } catch {
+    // Fall back to seed data when the previous local store is absent or invalid.
+  }
+
+  return seedJobs;
 }
 
-async function updateStore(mutator) {
-  writeQueue = writeQueue.then(async () => {
-    const currentItems = await readStore();
-    const nextItems = await mutator(currentItems);
-    await writeStore(nextItems);
-    return nextItems;
-  });
+async function ensureMigrated() {
+  const count = await Job.countDocuments();
 
-  return writeQueue;
+  if (count > 0) {
+    return;
+  }
+
+  const sqliteJobs = await loadSqliteJobs();
+  const initialJobs = sqliteJobs.length > 0 ? sqliteJobs : await loadJsonJobs();
+
+  await Job.insertMany(
+    initialJobs.map((job) =>
+      normalizeStoredJob({
+        ...sanitizeJobPayload(job),
+        _id: job._id || job.id,
+        postedAt: job.postedAt,
+        status: job.status || "approved",
+        userId: job.userId || null,
+      })
+    ),
+    { ordered: false }
+  );
 }
 
 export async function listJobs(filters = {}, sort = { postedAt: -1 }, { skip = 0, limit = 12 } = {}) {
-  const items = await readStore();
-  return sortItems(items.filter((job) => matchesFilters(job, filters)), sort).slice(skip, skip + limit);
+  await ensureMigrated();
+  return Job.find(filters).sort(sort).skip(skip).limit(limit).lean();
 }
 
 export async function countJobs(filters = {}) {
-  const items = await readStore();
-  return items.filter((job) => matchesFilters(job, filters)).length;
+  await ensureMigrated();
+  return Job.countDocuments(filters);
 }
 
-export async function getAllJobs(sort = { postedAt: -1 }) {
-  const items = await readStore();
-  return sortItems(items, sort);
+export async function getAllJobs(sort = { postedAt: -1 }, filters = {}) {
+  await ensureMigrated();
+  return Job.find(filters).sort(sort).lean();
 }
 
 export async function getJobById(id) {
-  const items = await readStore();
-  return items.find((job) => job._id === String(id)) || null;
+  await ensureMigrated();
+  return Job.findById(id).lean();
 }
 
 export async function createJob(payload) {
-  const nextJob = normalizeStoredJob({
-    ...payload,
-    _id: randomUUID(),
-    postedAt: payload.postedAt ? new Date(payload.postedAt).toISOString() : new Date().toISOString(),
-  });
-
-  await updateStore((items) => [...items, nextJob]);
-  return nextJob;
+  await ensureMigrated();
+  const job = await Job.create(normalizeStoredJob(payload));
+  return job.toObject();
 }
 
 export async function updateJobById(id, payload) {
-  let updatedJob = null;
-
-  await updateStore((items) =>
-    items.map((job) => {
-      if (job._id !== String(id)) {
-        return job;
-      }
-
-      updatedJob = normalizeStoredJob({
-        ...job,
-        ...payload,
-        _id: job._id,
-        postedAt: payload.postedAt ? new Date(payload.postedAt).toISOString() : job.postedAt,
-      });
-
-      return updatedJob;
-    })
-  );
-
-  return updatedJob;
+  await ensureMigrated();
+  return Job.findByIdAndUpdate(
+    id,
+    {
+      ...payload,
+      postedAt: payload.postedAt ? new Date(payload.postedAt) : undefined,
+    },
+    { new: true, runValidators: true }
+  ).lean();
 }
 
 export async function deleteJobById(id) {
-  let deletedJob = null;
-
-  await updateStore((items) =>
-    items.filter((job) => {
-      if (job._id === String(id)) {
-        deletedJob = job;
-        return false;
-      }
-
-      return true;
-    })
-  );
-
-  return deletedJob;
+  await ensureMigrated();
+  return Job.findByIdAndDelete(id).lean();
 }
 
 export async function replaceAllJobs(jobs) {
-  const nextItems = jobs.map((job) =>
-    normalizeStoredJob({
-      ...job,
-      _id: job._id || randomUUID(),
-      postedAt: job.postedAt ? new Date(job.postedAt).toISOString() : new Date().toISOString(),
-    })
+  await Job.deleteMany({});
+  await Job.insertMany(
+    jobs.map((job) =>
+      normalizeStoredJob({
+        ...job,
+        status: job.status || "approved",
+      })
+    )
   );
-
-  await updateStore(() => nextItems);
-  return nextItems;
+  return getAllJobs({ postedAt: -1 });
 }

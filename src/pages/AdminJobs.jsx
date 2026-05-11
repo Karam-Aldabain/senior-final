@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { LoaderCircle, Pencil, Plus, Save, Trash2, X } from "lucide-react";
-import { createJob, deleteJob, fetchJobs, updateJob } from "../services/jobsApi";
+import { CheckCircle2, LoaderCircle, Pencil, Plus, Save, Trash2, X, XCircle } from "lucide-react";
+import { createJob, deleteJob, fetchJobs, reviewJob, updateJob } from "../services/jobsApi";
 import { toJobFormValues, toJobPayload } from "../utils/jobForm";
 
 const EMPTY_FORM = toJobFormValues();
@@ -41,7 +41,7 @@ function AdminJobs() {
     setError("");
 
     try {
-      const response = await fetchJobs({ limit: 100, sortBy: "postedAt", sortOrder: "desc" });
+      const response = await fetchJobs({ limit: 100, sortBy: "postedAt", sortOrder: "desc", scope: "all" });
       setJobs(response.items || []);
     } catch (loadError) {
       setError(loadError.message);
@@ -112,6 +112,21 @@ function AdminJobs() {
       setError(deleteError.message);
     }
   };
+
+  const handleReview = async (jobId, status) => {
+    setError("");
+    setSuccessMessage("");
+
+    try {
+      await reviewJob(jobId, status);
+      setSuccessMessage(`Job ${status}.`);
+      await loadJobs();
+    } catch (reviewError) {
+      setError(reviewError.message);
+    }
+  };
+
+  const pendingJobs = jobs.filter((job) => job.status === "pending");
 
   return (
     <main className="bg-slate-50 px-6 py-12">
@@ -202,8 +217,70 @@ function AdminJobs() {
         <section className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm">
           <div className="flex items-center justify-between gap-4">
             <div>
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900">Pending Review</h2>
+              <p className="mt-2 text-sm text-slate-600">Company-submitted jobs must be approved before they appear publicly.</p>
+            </div>
+            {isLoading ? <LoaderCircle className="h-6 w-6 animate-spin text-blue-600" /> : null}
+          </div>
+
+          <div className="mt-6 overflow-x-auto">
+            <table className="min-w-full divide-y divide-slate-200">
+              <thead>
+                <tr className="text-left text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+                  <th className="pb-3">Job</th>
+                  <th className="pb-3">Location</th>
+                  <th className="pb-3">Type</th>
+                  <th className="pb-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200">
+                {pendingJobs.map((job) => (
+                  <tr key={job.id} className="text-sm text-slate-700">
+                    <td className="py-4">
+                      <p className="font-semibold text-slate-900">{job.title}</p>
+                      <p className="text-slate-500">{job.company}</p>
+                    </td>
+                    <td className="py-4">{job.location}</td>
+                    <td className="py-4">{job.type}</td>
+                    <td className="py-4">
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() => void handleReview(job.id, "approved")}
+                          className="inline-flex items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-3 py-2 font-semibold text-emerald-700 transition hover:bg-emerald-100"
+                        >
+                          <CheckCircle2 className="h-4 w-4" />
+                          Approve
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => void handleReview(job.id, "rejected")}
+                          className="inline-flex items-center gap-2 rounded-2xl border border-rose-200 bg-rose-50 px-3 py-2 font-semibold text-rose-700 transition hover:bg-rose-100"
+                        >
+                          <XCircle className="h-4 w-4" />
+                          Reject
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+                {pendingJobs.length === 0 ? (
+                  <tr>
+                    <td className="py-6 text-sm text-slate-500" colSpan="4">
+                      No pending jobs.
+                    </td>
+                  </tr>
+                ) : null}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm">
+          <div className="flex items-center justify-between gap-4">
+            <div>
               <h2 className="text-2xl font-bold tracking-tight text-slate-900">All Jobs</h2>
-              <p className="mt-2 text-sm text-slate-600">Database-backed jobs available to the main Jobs page.</p>
+              <p className="mt-2 text-sm text-slate-600">Only approved jobs are visible on the main Jobs page.</p>
             </div>
             {isLoading ? <LoaderCircle className="h-6 w-6 animate-spin text-blue-600" /> : null}
           </div>
@@ -216,6 +293,7 @@ function AdminJobs() {
                   <th className="pb-3">Location</th>
                   <th className="pb-3">Type</th>
                   <th className="pb-3">Level</th>
+                  <th className="pb-3">Status</th>
                   <th className="pb-3">Actions</th>
                 </tr>
               </thead>
@@ -229,6 +307,7 @@ function AdminJobs() {
                     <td className="py-4">{job.location}</td>
                     <td className="py-4">{job.type}</td>
                     <td className="py-4">{job.level}</td>
+                    <td className="py-4 capitalize">{job.status}</td>
                     <td className="py-4">
                       <div className="flex flex-wrap gap-2">
                         <button
@@ -261,4 +340,3 @@ function AdminJobs() {
 }
 
 export default AdminJobs;
-
